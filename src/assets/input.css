@@ -1,0 +1,16 @@
+@import "tailwindcss";
+ 
+@tailwind utilities;
+
+.bootom-nav, 
+body {
+    max-width: 600px;
+    padding: 0;
+    margin: 0 auto;
+    overflow-x: hidden;
+} 
+.header-area {
+    max-width: 600px; 
+    margin: 0 auto;
+    overflow-x: hidden;
+} 
