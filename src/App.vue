@@ -16,10 +16,21 @@
   </div>  
 </template>
 
+<script setup>
+import { useAuthStore } from './stores/authStore.js';
+
+const auth = useAuthStore();
+auth.loadFromStorage(); // ✅ Correct method name
+
+</script>
+
+
 <script>
 import Navbar from './components/NavbarComponent.vue'
 import BottomNav from '@/components/BottomNav.vue'
 import CartPanel from '@/components/CartPanel.vue'
+ 
+
 
 
 export default {

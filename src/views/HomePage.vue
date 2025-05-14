@@ -1,5 +1,13 @@
 <template>
   <div class="p-6 space-y-4">
+    <!-- 🛍️ Featured Products -->
+    <section>
+      <p class="text-sm text-gray-600 mb-4">
+        Welcome to <span class="font-semibold text-blue-600">SimpleMart</span> – where shopping is 
+        <span class="italic text-indigo-500">simple</span> & <span class="italic text-indigo-500">smart</span>!
+      </p>
+    </section>
+
     <!-- 🔥 Banner Slider -->
     <div class="overflow-x-auto whitespace-nowrap space-x-4 flex scroll-smooth">
       <div

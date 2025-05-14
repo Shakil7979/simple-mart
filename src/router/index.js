@@ -5,7 +5,8 @@ import Home from '../views/HomePage.vue'
 import ProductDetails from '../components/ProductDetails.vue' 
 import OrderComponent from '../components/OrderComponent.vue'
 import CategoryComponent from '../components/CategoryComponent.vue';
-import SettingComponent from '../components/SettingComponent.vue';
+import SettingComponent from '../components/SettingComponent.vue'; 
+import CategoryProductList from '../components/CategoryProductList.vue';
 
 const routes = [
   {
@@ -17,7 +18,7 @@ const routes = [
     path: '/product/:id',
     name: 'ProductDetails',
     component: ProductDetails, 
-  },
+  }, 
   {
     path: '/order',
     name: 'Order',
@@ -25,10 +26,21 @@ const routes = [
     props: route => ({ cartItems: route.params.cartItems })
   },
   {
+    path: '/checkout',
+    name: 'Checkout',
+    component: () => import('@/views/CheckoutPage.vue'), 
+  },
+  {
     path: '/categories',
     name: 'Categories',
     component: CategoryComponent,
   },
+  {
+    path: '/category/product',
+    name: 'CategoryProducts',
+    component: CategoryProductList,
+  },
+
   {
     path: '/settings',
     name: 'Settings',

@@ -1,6 +1,6 @@
 <!-- src/components/Navbar.vue -->
 <template>
-  <nav class="fixed top-0 left-0 right-0 bg-white shadow-md p-4 flex justify-between items-center header-area">
+  <nav class="fixed top-0 left-0 z-[999] right-0 bg-white shadow-md p-4 flex justify-between items-center header-area">
     <h1 class="text-2xl font-bold text-gray-800"><a href="/"><img class="w-[80px]" :src="require('@/assets/images/logo-white.png')" alt="Logo"></a></h1>
     <button
       @click="$emit('open-cart')"

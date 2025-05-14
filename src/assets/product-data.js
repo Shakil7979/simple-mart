@@ -2,6 +2,7 @@ export default [
   {
     id: 1,
     name: "T-shirt",
+    category: "T-Shirts",
     price: 19.99,
     images: [
       require('@/assets/images/1.jpg'),
@@ -20,6 +21,7 @@ export default [
   {
     id: 2,
     name: "Shoes",
+    category: "Shoes",
     price: 49.99,
     images: [
       require('@/assets/images/2.jpg'),
@@ -38,9 +40,10 @@ export default [
   {
     id: 3,
     name: "Backpack",
+    category: "Backpacks",
     price: 34.99,
     images: [
-      require('@/assets/images/3.jpg'),
+      require('@/assets/images/4.jpg'),
       require('@/assets/images/3.jpg'),
       require('@/assets/images/2.jpg')
     ],
@@ -56,10 +59,31 @@ export default [
   {
     id: 4,
     name: "Watch",
+    category: "Watches",
     price: 89.99,
     isNew: true,
     images: [
-      require('@/assets/images/4.jpg'),
+      require('@/assets/images/3.jpg'),
+      require('@/assets/images/1.jpg'),
+      require('@/assets/images/4.jpg')
+    ],
+    description: "A classic and elegant watch for every occasion.",
+    specifications: {
+      Material: "Stainless Steel",
+      Dial: "Analog",
+      Color: "Silver",
+      Band: "Leather",
+      WaterResistance: "3 ATM"
+    }
+  },
+  {
+    id: 9,
+    name: "Watch Blue",
+    category: "Watches",
+    price: 99.99,
+    isNew: true,
+    images: [
+      require('@/assets/images/3.jpg'),
       require('@/assets/images/1.jpg'),
       require('@/assets/images/4.jpg')
     ],
@@ -75,6 +99,7 @@ export default [
   {
     id: 5,
     name: "T-shirt",
+    category: "T-Shirts",
     price: 19.99,
     images: [
       require('@/assets/images/1.jpg'),
@@ -93,6 +118,7 @@ export default [
   {
     id: 6,
     name: "Shoes",
+    category: "Shoes",
     price: 49.99,
     images: [
       require('@/assets/images/2.jpg'),
@@ -111,10 +137,11 @@ export default [
   {
     id: 7,
     name: "Backpack",
+    category: "Backpacks",
     isNew: true,
     price: 34.99,
     images: [
-      require('@/assets/images/3.jpg'),
+      require('@/assets/images/4.jpg'),
       require('@/assets/images/3.jpg'),
       require('@/assets/images/2.jpg')
     ],
@@ -130,9 +157,10 @@ export default [
   {
     id: 8,
     name: "Watch",
+    category: "Watches",
     price: 89.99,
     images: [
-      require('@/assets/images/4.jpg'),
+      require('@/assets/images/3.jpg'),
       require('@/assets/images/1.jpg'),
       require('@/assets/images/4.jpg')
     ],
