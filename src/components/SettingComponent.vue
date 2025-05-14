@@ -89,6 +89,7 @@ export default {
       auth.user = null;
       auth.isAuthenticated = false;
       this.$router.push('/');
+      
     },
     onLoginSuccess() {
       this.showLoginModal = false;

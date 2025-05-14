@@ -76,14 +76,16 @@ export default {
       const isLoggedIn = localStorage.getItem('isLoggedIn');
       if (isLoggedIn && isLoggedIn === 'true') {
         this.closePanel();
-        this.$router.push('/checkout');
+        this.$router.push('/checkout'); 
+        window.location.href = '/checkout';
       } else {
         this.showLoginModal = true;
       }
     },
     onLoginSuccess() {
       this.showLoginModal = false;
-      this.closePanel();
+      this.closePanel(); 
+      window.location.href = '/checkout';
       this.$router.push('/checkout');
     }
   }

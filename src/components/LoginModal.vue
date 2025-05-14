@@ -117,8 +117,7 @@ export default {
 
           // ✅ Set name/email right away
           this.form.name = user.name;
-          this.form.email = user.email;
-          window.location.href = '/checkout';
+          this.form.email = user.email; 
           this.$emit('logged-in');
         } else {
           this.error = 'Invalid credentials.';
