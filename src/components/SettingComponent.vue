@@ -88,12 +88,12 @@ export default {
       const auth = useAuthStore();
       auth.user = null;
       auth.isAuthenticated = false;
-      this.$router.push('/');
+      window.location.href = '/';
       
     },
     onLoginSuccess() {
       this.showLoginModal = false;
-      this.$router.push('/'); // Redirect to profile or dashboard after login
+      window.location.href = '/';
     }
   }
 };
