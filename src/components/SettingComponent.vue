@@ -5,12 +5,11 @@
       <h1 class="text-2xl font-bold mb-6">Settings</h1>
 
       <ul class="space-y-4">
-        <li
-          class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:shadow-md transition cursor-pointer"
-          @click="goTo('profile')"
-        >
-          <span class="text-gray-800 font-medium">Profile</span>
-          <i class="fas fa-user text-gray-500"></i>
+        <li>
+          <router-link  to="/profile" class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:shadow-md transition cursor-pointer">
+            <span class="text-gray-800 font-medium">Profile</span>
+            <i class="fas fa-user text-gray-500"></i>
+          </router-link> 
         </li>
 
         <li
@@ -49,23 +48,26 @@
       </ul>
     </div>
 
+    <div class="p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition">
+    <p>sdfsdf</p>
+</div>
+
+
     <!-- Login Modal -->
     <LoginModal v-if="showLoginModal" @close="showLoginModal = false" @logged-in="onLoginSuccess" />
   </div>
 </template>
 
 <script>
+import { useThemeStore } from '../stores/themeStore.js';
 import { useAuthStore } from '../stores/authStore.js';
 import LoginModal from '@/components/LoginModal.vue';
 
 export default {
   name: 'SettingComponent',
-  components: {
-    LoginModal
-  },
+  components: { LoginModal },
   data() {
     return {
-      isDark: false,
       showLoginModal: false
     };
   },
@@ -73,15 +75,19 @@ export default {
     isAuthenticated() {
       const auth = useAuthStore();
       return auth.isAuthenticated;
+    },
+    isDark() {
+      const theme = useThemeStore();
+      return theme.isDark;
     }
   },
   methods: {
+    toggleTheme() {
+      const theme = useThemeStore();
+      theme.toggleTheme();
+    },
     goTo(page) {
       alert(`Navigating to ${page} settings`);
-    },
-    toggleTheme() {
-      this.isDark = !this.isDark;
-      alert(`Switched to ${this.isDark ? 'Dark' : 'Light'} Mode`);
     },
     logout() {
       localStorage.setItem('isLoggedIn', 'false');
@@ -89,7 +95,6 @@ export default {
       auth.user = null;
       auth.isAuthenticated = false;
       window.location.href = '/';
-      
     },
     onLoginSuccess() {
       this.showLoginModal = false;
@@ -97,6 +102,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style scoped>

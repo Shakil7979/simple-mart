@@ -8,12 +8,19 @@ import OrderComponent from '../components/OrderComponent.vue'
 import CategoryComponent from '../components/CategoryComponent.vue';
 import SettingComponent from '../components/SettingComponent.vue'; 
 import CategoryProductList from '../components/CategoryProductList.vue'; 
+import ProfileComponent from '../components/ProfileComponent.vue';
+
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/profile',
+    name: 'ProfileComponent',
+    component: ProfileComponent
   },
   {
     path: '/product/:id',
