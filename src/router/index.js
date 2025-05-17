@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/HomePage.vue'
 import CheckoutPage from '../views/CheckoutPage.vue' 
 
-import ProductDetails from '../components/ProductDetails.vue' 
-import OrderComponent from '../components/OrderComponent.vue'
+import ProductDetails from '../components/ProductDetails.vue' ;
+import OrderComponent from '../components/OrderComponent.vue' ;
 import CategoryComponent from '../components/CategoryComponent.vue';
 import SettingComponent from '../components/SettingComponent.vue'; 
 import CategoryProductList from '../components/CategoryProductList.vue'; 

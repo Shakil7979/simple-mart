@@ -48,10 +48,6 @@
       </ul>
     </div>
 
-    <div class="p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition">
-    <p>sdfsdf</p>
-</div>
-
 
     <!-- Login Modal -->
     <LoginModal v-if="showLoginModal" @close="showLoginModal = false" @logged-in="onLoginSuccess" />
@@ -108,3 +104,4 @@ export default {
 <style scoped>
 /* Add your custom styles if needed */
 </style>
+ 
