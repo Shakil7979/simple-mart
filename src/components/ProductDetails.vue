@@ -60,27 +60,25 @@
 </template>
 
 <script>
-import products from '@/assets/product-data.js'; // Assuming you have product data here
+import products from '@/assets/product-data.js';
 
 export default {
   data() {
     return {
-      product: null, // Start with null to handle product not found
-      selectedImage: '', // Track the selected image
+      product: null,
+      selectedImage: '', 
     };
   },
   mounted() {
     const productId = this.$route.params.id;
     this.product = products.find(p => p.id === parseInt(productId));
 
-    // If product is found, set the default image
     if (this.product) {
-      this.selectedImage = this.product.images ? this.product.images[0] : ''; // Set the first image if exists
+      this.selectedImage = this.product.images ? this.product.images[0] : ''; 
     }
   },
   methods: {
     addToCart() {
-      // Emit or handle add to cart logic
       this.$emit('add-to-cart', this.product);
     }
   }
@@ -88,13 +86,13 @@ export default {
 </script>
 
 <style scoped>
-/* Custom styles for hiding the scrollbar */
+
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  display: none;  
 }
 </style>

@@ -7,7 +7,7 @@
         :style="{ backgroundImage: `url(${require('@/assets/images/cover.png')})` }"
       ></div>
 
-      <!-- Profile Info -->
+      <!-- Profile Info -->  
       <div class="p-6 -mt-12 flex items-end space-x-3">
         <img
           src="https://randomuser.me/api/portraits/men/32.jpg"
@@ -95,3 +95,5 @@ export default {
   },
 };
 </script>
+
+
